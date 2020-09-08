@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Statestik</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/statestics.css">
+	<link rel="stylesheet" href="css/popup.css">
+
+  <!-- chartist library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.css" integrity="sha256-seGyqLj5T52Hx8W7/YTajtNXGXQf+IksfkcaKGoTkbY=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js" integrity="sha256-xNhpuwaNiVdna6L8Wy3GNuQz1z+SCmo4NY1c7cJ9Vdc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist-plugin-legend/0.6.2/chartist-plugin-legend.js" integrity="sha256-rm+ZFJf1d1bqR3jvapLCMwLQaSBE87bp/Kh5Wc08fXY=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Hjem</a>
+				<a href="/test.html">Hastighedstest</a>
+    <a href="statistics.html#title">Statestik</a>
+    <a href="index.html#FAQ">FAQ</a>
+    <a href="#FAQ">Om statestik</a>
+  </div>
+
+  <div class="page-container" id="temp-id">
+
+    <h1 class="title " id="title">Statestik</h1>
+
+    <div class="ct-major-seventh chart-container ">
+
+    </div>
+
+    <div id="options">
+      <button type="button" name="clear" onclick="createClearConfirm()">Ryd&nbsp;data</button>
+    </div>
+
+    <hr class="seperator" id="FAQ">
+
+    <div class="FAQ ">
+      <div class="FAQ-text">
+        <h1 id="A1" class="anchor">
+          <a href="#A1" class="anchor-link">#</a>Hvad viser grafen?
+        </h1>
+        <p>
+					Hver sæt af en rød og en blå søjle repræsenterer en lektion, som du har gennemført. Den røde søjler viser antallet af fejl, og den blå søjle viser hvor stor en del det antal fejl udgør af den samlede lektion/tekst.<br />
+					<br />
+					Hvis du har taget en lektion flere gange, repræsenterer søjlerne den mest fejlfrie gang du har taget lektionen. Altså, den tur hvor du fik færrest fejl. <br />
+					<br />
+					Hvis du vil rydde dine data, kan du gøre det ved at trykke på knappen “ryd data” under grafen. <br />
+        </p>
+      </div>
+      <div class="FAQ-text">
+        <h1 id="A2" class="anchor">
+					<a href="#A2" class="anchor-link">#</a>Fejlprocent
+				</h1>
+        <p>
+					Du overvejer måske måske hvilken fejlprocent man bør stræbe efter. Svaret er: Så meget som du kan udholde. Det er bedre med et lavt antal fejl end høj hastighed. Det tager nemlig lang tid at gå tilbage og rette fejl. Træn derfor en øvelse igennem indtil du er så tæt på 0% som du realistisk set kan komme. Det gør ikke noget med et par fejl, men desto lavere desto bedre. <br />
+        </p>
+      </div>
+      <div class="FAQ-text">
+        <h1 id="A3" class="anchor">
+					<a href="#A3" class="anchor-link">#</a>Hvor ofte bør man øve sig?
+				</h1>
+        <p>
+					Det er bedre med et lavt antal fejl end høj hastighed. Det tager nemlig lang tid at gå tilbage og rette fejl. Træn derfor en øvelse igennem indtil du er så tæt på 0% som du realistisk set kan komme. Det gør ikke noget med et par fejl, men desto lavere desto bedre. <br />
+        </p>
+      </div>
+    </div>
+
+    <!-- scripts to run after dom loaded -->
+    <script src="assets/lessons.js" charset="utf-8"></script>
+    <script src="js/popup.js" charset="utf-8"></script>
+    <script src="js/storage.js" charset="utf-8"></script>
+    <script src="js/populateStatistics.js" charset="utf-8"></script>
+    <script src="js/statestics.js" charset="utf-8"></script>
+
+  </body>
+  </html>

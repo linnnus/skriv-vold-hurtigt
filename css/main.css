@@ -1,0 +1,228 @@
+:root {
+  --light-red: rgb(255, 122, 153);
+  --dark-red: rgb(245, 47, 93);
+	--darker-red: rgb(204, 39, 77);
+  --light-purple: rgb(244, 122, 255);
+  --dark-purple: rgb(205, 47, 245);
+  --light-turquoise: rgb(126, 247, 154);
+  --dark-turquoise: rgb(37, 186, 72);
+  --light-blue: rgb(168, 191, 255);
+  --dark-blue: rgb(100, 129, 209);
+  --light-orange: rgb(255, 177, 122);
+  --dark-orange: rgb(207, 146, 103);
+  --dark-yellow: rgb(252, 186, 3);
+  --light-yellow: rgb(255, 208, 77);
+  --lighter-grey: #f9f9f9;
+  --light-grey: gainsboro;
+  --dark-grey: silver;
+
+  --line-width: 2px;
+
+  font-family: Arial, sans-serif; /* default font */
+}
+
+/* set box sizing for all */
+* {
+	box-sizing: border-box;
+}
+
+/* style button */
+button {
+  background-color: var(--dark-red, red);
+  padding: 10px 15px;
+  border: none;
+
+  color: white;
+  text-align: center;
+
+  width: min-content;
+  height: min-content;
+}
+
+.seperator {
+  border-top: var(--line-width, 2px) solid var(--light-gray, lightgrey);
+
+  max-width: 1100px;
+  width: 100%;
+}
+
+#title {
+  font-size: 3em;
+  text-align: center;
+  width: fit-content;
+  margin-top: 0;
+
+  border-bottom: var(--line-width, 2px) solid var(--light-gray, lightgrey);
+}
+
+/* hide scrollbar while retaining functionality*/
+body::-webkit-scrollbar {
+  display:none;
+}
+
+.FAQ-text {
+  width: 700px;
+}
+
+/***************************** PAGE LAYOUT STUFF *******************************/
+
+/* remove any spacing on body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* make some whitespace around contents */
+.page-container {
+  padding: 7vh 10% 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* give vertical spacing bewteen contents */
+.page-container > * {
+  margin-bottom: 7vh;
+}
+
+/* wont center align properly else */
+.FAQ {
+  width: fit-content;
+}
+
+/****************************** NAVBAR ************************************/
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: white ;
+  font-family: Arial;
+  border-bottom: var(--line-width, 2px) solid var(--light-grey);
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+  z-index: 5; /* Keep on top of everything else */
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: var(--dark-red);
+  color: white;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  overflow-y: auto; /* only show scrollbar when needed */
+  position: fixed;
+  background-color: var(--lighter-grey);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: inherit;
+  max-height: 80vh;
+}
+
+/* style scrollbar */
+.dropdown-content::-webkit-scrollbar {
+  /* display: none; */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: grid;
+  -ms-grid-columns: repeat(5, auto);
+  grid-template-columns: repeat(5, auto);
+}
+
+
+/******************************* HEADERS ***************************/
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1.anchor {
+	margin-left: -1ch;
+}
+
+h1 > a.anchor-link {
+  position: relative;
+  left: -1ch;
+  text-decoration: none;
+  color: var(--light-grey);
+
+  transition: color .3s, text-decoration .3s;
+}
+
+/* change color on hover */
+h1 > a:hover {
+	color: red;
+  color: var(--dark-red);
+}
+
+/* style all links inside paragraphs */
+p a {
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--dark-red);
+}
+
+/* style inline color stuff */
+span.blue-inline { background-color: var(--light-blue); }
+span.turquoise-inline { background-color: var(--light-turquoise); }
+span.purple-inline { background-color: var(--light-purple); }
+span.red-inline { background-color: var(--light-red); }
+span.orange-inline { background-color: var(--light-orange); }
+
+/* prevent navbar from overlapping headers */
+html {
+  scroll-padding-top: 70px; /* height of sticky header */
+}

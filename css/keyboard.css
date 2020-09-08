@@ -1,0 +1,166 @@
+/* body {
+  --light-red: rgb(255, 122, 153);
+  --dark-red: rgb(245, 47, 93);
+  --light-purple: rgb(244, 122, 255);
+  --dark-purple: rgb(205, 47, 245);
+  --light-turquoise: rgb(126, 247, 154);
+  --dark-turquoise: rgb(37, 186, 72);
+  --light-blue: rgb(168, 191, 255);
+  --dark-blue: rgb(100, 129, 209);
+  --light-orange: rgb(255, 177, 122);
+  --dark-orange: rgb(207, 146, 103);
+
+  --dark-yellow: yellow;
+  --light-yellow: lightyellow;
+
+  --lighter-grey: #f9f9f9;
+  --light-grey: gainsboro;
+  --dark-grey: silver;
+} */
+
+.keyboard-base {
+  /* size */
+  width: min-content;
+  padding: 10px;
+
+  /* look */
+  background-color: var(--light-grey);
+  border: 3px solid var(--dark-grey);
+  border-radius: 10px;
+
+  /* grid setup */
+  display: grid;
+  grid-template-columns: repeat(30, 24px);
+  grid-template-rows: repeat(5, 48px);
+  grid-gap: 8px;
+
+}
+
+.keyboard-base > .key {
+  /* look */
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+
+  /* text */
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding-top: 1em;
+                              /* make text unselectable */
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+
+  /* position */
+  grid-column: span 2;
+}
+
+/* special key postitioning */
+
+.keyboard-base > .space {
+  grid-column: span 13;
+}
+
+.keyboard-base > .backspace {
+  grid-column: span 4;
+}
+
+.keyboard-base > .tab {
+  grid-column: span 3;
+}
+
+.keyboard-base > .enter {
+  grid-column: span 3;
+}
+
+.keyboard-base > .capslock {
+  grid-column: span 4;
+}
+
+.keyboard-base > .return {
+  grid-column: span 2;
+}
+
+.keyboard-base > .leftshift {
+  grid-column: span 3;
+}
+
+.keyboard-base > .rightshift {
+  grid-column: span 5;
+}
+
+.keyboard-base > .leftctrl {
+  grid-column: span 3;
+}
+
+.keyboard-base > .command {
+  grid-column: span 3;
+}
+
+/* Finger classes */
+
+.index-finger {
+  background-color: var(--light-red);
+  border-color: var(--dark-red);
+}
+
+/* change color when corresponding key pressed */
+.index-finger.down {
+  background-color: var(--dark-red);
+}
+
+.middle-finger {
+  background-color: var(--light-purple);
+  border-color: var(--dark-purple);
+}
+
+/* change color when corresponding key pressed */
+.middle-finger.down {
+  background-color: var(--dark-purple);
+}
+
+.ring-finger {
+  background-color: var(--light-turquoise);
+  border-color: var(--dark-turquoise);
+}
+
+/* change color when corresponding key pressed */
+.ring-finger.down {
+  background-color: var(--dark-turquoise);
+}
+
+.pinkey {
+  background-color: var(--light-blue);
+  border-color: var(--dark-blue);
+}
+
+/* change color when corresponding key pressed */
+.pinkey.down {
+  background-color: var(--dark-blue);
+}
+
+.thumb {
+  background-color: var(--light-orange);
+  border-color: var(--dark-orange);
+}
+
+/* change color when corresponding key pressed */
+.thumb.down {
+  background-color: var(--dark-orange);
+}
+
+/* other stuff  */
+
+.highlighted {
+  background-color: var(--light-yellow) !important;
+  border-color: var(--dark-yellow) !important;
+  box-shadow: 0 0 2px 1px rgb(252, 186, 3);
+}
+
+/* give f and j underlines, like on a real keyboard */
+/* look hella ugly, but might help ppl remember where to put their fingers */
+#f.key, #j.key {
+  text-decoration: underline;
+}

@@ -1,0 +1,85 @@
+#options {
+  width: fit-content;
+}
+
+#options * {
+  display: inline;
+}
+
+#options > ul {
+  padding: 0;
+}
+
+.ct-major-seventh {
+  max-height: 50vh;
+}
+
+.ct-series-a .ct-bar {
+  /* override default colour */
+  stroke: var(--dark-red, darkred) !important;
+}
+
+.ct-series-b .ct-bar{
+  /* override default colour */
+  stroke: var(--dark-blue, red) !important;
+}
+
+/************************** Legend stuff  **************************/
+
+.ct-legend {
+  position: relative;
+  z-index: 2;
+
+  /* center align */
+  margin: 0 auto 0 auto;
+  width: fit-content;
+}
+
+.ct-series-0 {
+  background-color: var(--dark-red);
+  border-color: var(--dark-red);
+}
+
+.ct-series-1 {
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+
+.ct-legend > li {
+  position: relative;
+
+  padding: 2px;
+  display: inline;
+  color: white;
+  margin: 0 5px 3px 5px;
+
+  /* font-size: 1.2em; */
+
+  border-style: solid;
+  border-radius: 100px; /* completely round */
+  border-width: medium;
+  padding-left: .7em;
+  padding-right: .7em;¨
+
+}
+
+li:before {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  content: '';
+  border: 3px solid transparent;
+  border-radius: 2px;
+}
+
+li.inactive:before {
+  background: transparent;
+}
+
+&.ct-legend-inside {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

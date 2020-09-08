@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/keyboard.css">
+	<link rel="stylesheet" href="css/game.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="/index.html">Hjem</a>
+		<a href="/statistics.html">Statestik</a>
+		<a href="/test.html">Hastighedstest</a>
+		<a href="#FAQ">FAQ</a>
+		<div class="dropdown">
+			<button class="dropbtn">Lektioner
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+			</div>
+		</div>
+		<a href="javascript:init(getLastLesson())">Gentag</a>
+	</div>
+
+	<div class="page-container" id="temp-id">
+
+		<h1 class="title" id="title">Lær at skrive blindskrift</h1>
+
+		<div class="game">
+
+			<div class="text-containder" id="text-container">
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-letter"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+				<p class="text-pointer"></p>
+			</div>
+
+			<div class="stats">
+				<p>Antal fejl: <span id="mistakes">0</span></p>
+				<p>Fremskridt: <span id="progress">0</span>%</p>
+				<p>Beskrivelse: "<span id="trains">a, b, c</span>"</p>
+				<p>Længde: <span id="length">0</span> karakterer</p>
+			</div>
+
+			<div class="keyboard-base">
+				<div class="key pinkey" id="½">½</div>
+				<div class="key pinkey" id="1" id="1">1</div>
+				<div class="key ring-finger" id="2" id="2">2</div>
+				<div class="key middle-finger" id="3" id="3">3</div>
+				<div class="key index-finger" id="4" id="4">4</div>
+				<div class="key index-finger" id="5">5</div>
+				<div class="key index-finger" id="6">6</div>
+				<div class="key index-finger" id="7">7</div>
+				<div class="key middle-finger" id="8">8</div>
+				<div class="key ring-finger" id="9">9</div>
+				<div class="key ring-finger" id="0">0</div>
+				<div class="key ring-finger" id="+">+</div>
+				<div class="key pinkey" id="´">´</div>
+				<div class="key backspace pinkey" id="Backspace">Backspace</div>
+				<div class="key tab pinkey" id="Tab">Tab</div>
+				<div class="key pinkey" id="q">Q</div>
+				<div class="key ring-finger" id="w">W</div>
+				<div class="key middle-finger" id="e">E</div>
+				<div class="key index-finger" id="r">R</div>
+				<div class="key index-finger" id="t">T</div>
+				<div class="key index-finger" id="y">Y</div>
+				<div class="key index-finger" id="u">U</div>
+				<div class="key middle-finger" id="i">I</div>
+				<div class="key ring-finger" id="o">O</div>
+				<div class="key pinkey" id="p">P</div>
+				<div class="key pinkey" id="å">Å</div>
+				<div class="key pinkey" id="^">^</div>
+				<div class="key enter pinkey" id="enter">Enter</div>
+				<div class="key capslock pinkey" id="capsLock">CapsLock</div>
+				<div class="key pinkey" id="a" id="a">A</div>
+				<div class="key ring-finger" id="s">S</div>
+				<div class="key middle-finger" id="d">D</div>
+				<div class="key index-finger" id="f">F</div>
+				<div class="key index-finger" id="g">G</div>
+				<div class="key index-finger" id="h">H</div>
+				<div class="key index-finger" id="j">J</div>
+				<div class="key middle-finger" id="k">K</div>
+				<div class="key ring-finger" id="l">L</div>
+				<div class="key pinkey" id="æ">Æ</div>
+				<div class="key pinkey" id="ø">Ø</div>
+				<div class="key pinkey" id="*">*</div>
+				<div class="key pinkey" id=""> </div>
+				<div class="key leftshift pinkey" id="left-shift">Shift</div>
+				<div class="key pinkey" id="<"><</div>
+				<div class="key pinkey" id="z">Z</div>
+				<div class="key ring-finger" id="x">X</div>
+				<div class="key middle-finger" id="c">C</div>
+				<div class="key index-finger" id="v">V</div>
+				<div class="key index-finger" id="b">B</div>
+				<div class="key index-finger" id="n">N</div>
+				<div class="key index-finger" id="m">M</div>
+				<div class="key middle-finger" id=",">,</div>
+				<div class="key ring-finger" id=".">.</div>
+				<div class="key pinkey" id="-">-</div>
+				<div class="key rightshift pinkey" id="right-shift">Shift</div>
+				<div class="key leftctrl pinkey" id="left-ctrl">Ctrl</div>
+				<div class="key pinkey" id="left-alt">Alt</div>
+				<div class="key command pinkey" id="left-meta">Meta</div>
+				<div class="key space thumb" id="space">Space</div>
+				<div class="key command ring-finger" id="right-meta">Meta</div>
+				<div class="key pinkey" id="right-alt">Alt</div>
+				<div class="key pinkey" id="right-ctrl">Ctrl</div>
+				<div class="key pinkey" id="fn">Fn</div>
+			</div>
+
+		</div>
+
+		<hr class="seperator" id="FAQ">
+
+		<div class="FAQ ">
+			<div class="FAQ-text">
+				<h1 id="A1" class="anchor">
+					<a href="#A1" class="anchor-link">#</a>Hvordan virker programmet?
+				</h1>
+				<p>
+					Programmet her er designet til at hjælpe dig med at blive hurtigere til at skrive. Når du vælger en lektion (fra listen under “lektioner”), bliver du præsenteret for en række af tegn. Du skal taste det tilsvarende tegn på dit tastatur (se <a href="#A2">Hvad skyldes farverne?</a>). Når du har gennemført en lektion kan du se den på <a href="statistics.html">statestiksiden</a>. Du kan også tage en test <a href="test.html">her</a>, for at blive givet et konkret tal.
+				</p>
+			</div>
+			<div class="FAQ-text">
+				<h1 id="A2" class="anchor"><a href="#A2" class="anchor-link">#</a>Hvad skyldes farverne?</h1>
+				<p>
+					Farverne viser hvilke fingre, der skal trykke hvilke knapper. Fordelingen er som følger: <br>
+
+					<ul class="finger-placements">
+						<li>De <span class="blue-inline">blå</span> taster skal trykkes med lillefingrene,</li>
+						<li>de <span class="turquoise-inline">grønne</span> taster skal trykkes med ringfingrene,</li>
+						<li>de <span class="purple-inline">lilla</span> taster skal trykkes med langefingrene,</li>
+						<li>de <span class="red-inline">røde</span> taster skal trykkes med pegefingrene og</li>
+						<li>den <span class="orange-inline">orange</span> tast skal trykkes med tommelfingrene.</li>
+					</ul>
+
+
+					De blå taster i venstre side skal selvfølgeligt trykkes med lillefingeren på den venstre hånd og omvendt. <br>
+					<br>
+					Ved hvert bogstav vil en eller flere taster lyse op. Dem skal du trykke på for at frembringe det rigtige tegn. Hvis to modifikatorer(fx. shift, ctrl. meta el.lign.) lyser op på samme tid, behøver du kun trykke på den ene af dem (selvfølgeligt i kombination med den normale knap). Begge knapper lyser op for at vise, at du kan frit kan vælge den der er nemmest at trykke på i denne bestemte kontekst. <br>
+					<br>
+					Hvis du er særligt opmærksom har du sikkert bemærket at to a knapperne har en lille streg under dem. Disse afspejler (forhåbentlig) nogle små dutter på de tilsvarende knapper på dit fysiske tastatur. De fungerer som små fyrtårne, så du kan orientere dig på tastaturet uden at kigge ned. Når du skriver, skal dine hænder hele tiden søge tilbage til disse to dutter, så dine pegefingre hviler på dem. På den måde ved du altid hvordan du befinder dig ift. dit tastatur. Det er helt essentielt for blindskrift at kunne orientere sig uden at skulle kigge ned. <br>
+				</p>
+			</div>
+			<div class="FAQ-text">
+				<h1 id="A3" class="anchor"><a href="#A3" class="anchor-link">#</a>Hvorfor lære blindrskift?</h1>
+				<p>
+					I dag foregår mere og mere af det vi gør på computeren. Når du bliver i stand til at skrive hurtigt og uden anstrengelse, får du mere tid og overskud til det du <i>egentlig</i> er i gang med. Du sparer selvfølgeligt også en masse tid. <br>
+					<br>
+					En dansk undersøgelse har desuden påvist en sammenhæng mellem ordblinde der lærer at skrive på computer og forbedret læseevne. Du kan læse om forbedring af læseevne ved blindskrift i <a href="https://politiken.dk/forbrugogliv/digitalt/forbrugerelektronik/ECE1096116/blindskrift-goer-boern-til-bedre-laesere/">Politiken</a>.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- if js is not enabled -->
+	<noscript>
+		<div class="popup">
+			<h1>Javascript er ikke slået til!</h1>
+			<p>
+				Hjemmesiden kunne ikke benytte Javascript. <br>
+				Javascript er nødvendigt for at hjemmesiden kan fungere.
+			</p>
+		</div>
+	</noscript>
+
+	<!-- Scripts to load after dom -->
+	<script src="assets/lessons.js" charset="utf-8"></script>
+	<script src="js/popup.js" charset="utf-8"></script>
+	<script src="js/populateDropDown.js" charset="utf-8"></script>
+	<script src="js/keyboard.js" charset="utf-8"></script>
+	<script src="js/storage.js" charset="utf-8"></script>
+	<script src="js/game.js" charset="utf-8"></script>
+</body>
+</html>

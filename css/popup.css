@@ -1,0 +1,54 @@
+.popup-background {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+}
+
+.popup-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-filter: blur(0.0000000000000001px); /* fix bug in chrome, where transfromed text appears blurred */
+
+  background-color: white;
+  border-style: solid;
+  border-width: var(--line-width, 2px);
+  border-color: var(--light-grey, lightgrey);
+
+  padding: 50px; /* sammme som den mellem pagecontent børn */
+	width: 600px;
+
+}
+
+.popup-box a.close {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	text-decoration: none;
+	color: var(--dark-grey);
+	font-size: 28px;
+	line-height: 1ex;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
+	align-content: center;
+	margin: 0 auto 0 auto;
+}
+
+.popup-button {
+  margin: 5px;
+  width: fit-content;
+}
+
+/* remove outline on focus */
+.popup-button:focus {
+  outline: none;
+}
