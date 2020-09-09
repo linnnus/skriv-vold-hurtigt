@@ -47,7 +47,6 @@
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  padding-top: .5em;
 
 	/* make text unselectable */
   -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -57,6 +56,11 @@
 
   /* position */
   grid-column: span 2;
+
+	/* align symbol center */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* special key postitioning */
@@ -136,7 +140,8 @@
   text-decoration: underline;
 }
 
-/* Aspect ratio stuff */
+/* Aspect ratio stuff
+	based on this article https://css-tricks.com/aspect-ratio-boxes/ */
 .aspect-ratio-box {
 	width: 100%;
   height: 0;
