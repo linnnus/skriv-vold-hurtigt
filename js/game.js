@@ -1,19 +1,19 @@
 // define global variables
-let stringParas = [];
-let pointerParas = [];
+const game = document.getElementById('game-container');
+const stringParas = [...document.getElementsByClassName('text-letter')];
+const pointerParas = [...document.getElementsByClassName('text-pointer')];
 
 const mistakesDisp = document.getElementById('mistakes');
 const progressDisp = document.getElementById('progress');
 const trainsDisp = document.getElementById('trains');
 const lengthDisp = document.getElementById('length');
 
+let lesson;
 let string;
 let index;
 let subindex;
-let gameover = true; // dont accept input untill init finished
 let mistakes;
-
-let lesson;
+let gameover = true; // dont accept input untill init finished
 
 // add key eventlisteners
 document.addEventListener('keypress', e => {
@@ -24,6 +24,9 @@ document.addEventListener('keypress', e => {
   }
 
   updateGame(e);
+
+	// make sure we stay focused on the game
+	game.scrollIntoViewIfNeeded(true);
 
 });
 
@@ -52,9 +55,6 @@ function init(lessonNum){
 	lengthDisp.textContent = string.length;
 
   // populate string paras and pointers
-  stringParas = [...document.getElementsByClassName('text-letter')];
-	pointerParas = [...document.getElementsByClassName('text-pointer')];
-
 	updatePointerParas();
 	updateStringParas();
 
