@@ -20,7 +20,7 @@
 
 .keyboard-base {
   /* size */
-  width: min-content;
+  width: 100%;
   padding: 10px;
 
   /* look */
@@ -30,10 +30,11 @@
 
   /* grid setup */
   display: grid;
-  grid-template-columns: repeat(30, 24px);
-  grid-template-rows: repeat(5, 48px);
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-gap: 8px;
-
+  box-sizing: border-box;
+  height: 100%;
 }
 
 .keyboard-base > .key {
@@ -45,9 +46,10 @@
   /* text */
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  padding-top: 1em;
-                              /* make text unselectable */
+  font-size: 1rem;
+  padding-top: .5em;
+
+	/* make text unselectable */
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
@@ -58,49 +60,18 @@
 }
 
 /* special key postitioning */
-
-.keyboard-base > .space {
-  grid-column: span 13;
-}
-
-.keyboard-base > .backspace {
-  grid-column: span 4;
-}
-
-.keyboard-base > .tab {
-  grid-column: span 3;
-}
-
-.keyboard-base > .enter {
-  grid-column: span 3;
-}
-
-.keyboard-base > .capslock {
-  grid-column: span 4;
-}
-
-.keyboard-base > .return {
-  grid-column: span 2;
-}
-
-.keyboard-base > .leftshift {
-  grid-column: span 3;
-}
-
-.keyboard-base > .rightshift {
-  grid-column: span 5;
-}
-
-.keyboard-base > .leftctrl {
-  grid-column: span 3;
-}
-
-.keyboard-base > .command {
-  grid-column: span 3;
-}
+.keyboard-base > .space { grid-column: span 13; }
+.keyboard-base > .backspace { grid-column: span 4; }
+.keyboard-base > .tab { grid-column: span 3; }
+.keyboard-base > .enter { grid-column: span 3; }
+.keyboard-base > .capslock { grid-column: span 4; }
+.keyboard-base > .return { grid-column: span 2; }
+.keyboard-base > .leftshift { grid-column: span 3; }
+.keyboard-base > .rightshift { grid-column: span 5; }
+.keyboard-base > .leftctrl { grid-column: span 3; }
+.keyboard-base > .command { grid-column: span 3; }
 
 /* Finger classes */
-
 .index-finger {
   background-color: var(--light-red);
   border-color: var(--dark-red);
@@ -163,4 +134,21 @@
 /* look hella ugly, but might help ppl remember where to put their fingers */
 #f.key, #j.key {
   text-decoration: underline;
+}
+
+/* Aspect ratio stuff */
+.aspect-ratio-box {
+	width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: calc(298 / 978 * 100%);
+  background: white;
+  position: relative;
+}
+.aspect-ratio-box-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

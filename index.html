@@ -27,7 +27,7 @@
 
 		<h1 class="title" id="title">Lær at skrive blindskrift</h1>
 
-		<div class="game">
+		<div class="game-container" id="game-container">
 
 			<div class="text-containder" id="text-container">
 				<p class="text-letter"></p>
@@ -99,12 +99,14 @@
 				<p>Længde: <span id="length">0</span> karakterer</p>
 			</div>
 
-			<div class="keyboard-base">
+			<div class="aspect-ratio-box">
+        <div class="aspect-ratio-box-inner">
+            			<div class="keyboard-base">
 				<div class="key pinkey" id="½">½</div>
-				<div class="key pinkey" id="1" id="1">1</div>
-				<div class="key ring-finger" id="2" id="2">2</div>
-				<div class="key middle-finger" id="3" id="3">3</div>
-				<div class="key index-finger" id="4" id="4">4</div>
+				<div class="key pinkey" id="1">1</div>
+				<div class="key ring-finger" id="2">2</div>
+				<div class="key middle-finger" id="3">3</div>
+				<div class="key index-finger" id="4">4</div>
 				<div class="key index-finger" id="5">5</div>
 				<div class="key index-finger" id="6">6</div>
 				<div class="key index-finger" id="7">7</div>
@@ -129,7 +131,7 @@
 				<div class="key pinkey" id="^">^</div>
 				<div class="key enter pinkey" id="enter">Enter</div>
 				<div class="key capslock pinkey" id="capsLock">CapsLock</div>
-				<div class="key pinkey" id="a" id="a">A</div>
+				<div class="key pinkey" id="a">A</div>
 				<div class="key ring-finger" id="s">S</div>
 				<div class="key middle-finger" id="d">D</div>
 				<div class="key index-finger" id="f">F</div>
@@ -143,7 +145,7 @@
 				<div class="key pinkey" id="*">*</div>
 				<div class="key pinkey" id=""> </div>
 				<div class="key leftshift pinkey" id="left-shift">Shift</div>
-				<div class="key pinkey" id="<"><</div>
+				<div class="key pinkey" id="<">&lt;</div>
 				<div class="key pinkey" id="z">Z</div>
 				<div class="key ring-finger" id="x">X</div>
 				<div class="key middle-finger" id="c">C</div>
@@ -164,6 +166,9 @@
 				<div class="key pinkey" id="right-ctrl">Ctrl</div>
 				<div class="key pinkey" id="fn">Fn</div>
 			</div>
+
+        </div>
+    </div>
 
 		</div>
 
@@ -190,8 +195,6 @@
 						<li>de <span class="red-inline">røde</span> taster skal trykkes med pegefingrene og</li>
 						<li>den <span class="orange-inline">orange</span> tast skal trykkes med tommelfingrene.</li>
 					</ul>
-
-
 					De blå taster i venstre side skal selvfølgeligt trykkes med lillefingeren på den venstre hånd og omvendt. <br>
 					<br>
 					Ved hvert bogstav vil en eller flere taster lyse op. Dem skal du trykke på for at frembringe det rigtige tegn. Hvis to modifikatorer(fx. shift, ctrl. meta el.lign.) lyser op på samme tid, behøver du kun trykke på den ene af dem (selvfølgeligt i kombination med den normale knap). Begge knapper lyser op for at vise, at du kan frit kan vælge den der er nemmest at trykke på i denne bestemte kontekst. <br>
