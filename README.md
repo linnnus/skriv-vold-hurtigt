@@ -1,9 +1,10 @@
 # TODO
 ## Problems
-* clean up css
+* css
 	- polyfill for var()
 	- change direction in dropdown
-* fix popups.
+	- fix popups
+ 	- fix letters on keyboard
 * sometimes i manage to escape, so space doesnt get preventDefualt()ed - after using navbar?
 * use split-keyboad in explanation
 
