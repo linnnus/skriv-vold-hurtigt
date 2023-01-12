@@ -130,7 +130,7 @@ function handleGameover(){
 
   // popup
   const title = 'Du er færdig!';
-  const message = `Du er færdig med opgaven! Du lavede ${mistakes} fejl, hvilket svarer til ca. ${Math.floor(mistakesP)}%.\nDu kan se hvordan du klarer dig det store hele på statestik siden.`;
+  const message = `Du er færdig med opgaven! Du lavede ${mistakes} fejl, hvilket svarer til ca. ${Math.floor(mistakesP)}%.\nDu kan se hvordan du klarer dig det store hele på statistik siden.`;
   const buttons = [
     {name: 'OK', onclick: `init(${getNextLesson()}); removeParent(this, 3);`},
   ];
